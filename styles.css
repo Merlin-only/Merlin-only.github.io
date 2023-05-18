@@ -1,0 +1,30 @@
+/* Стили для меню */
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+ul.menu li {
+  float: left;
+}
+
+ul.menu li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.menu li a:hover {
+  background-color: #ddd;
+}
+
+/* Стили для основного контента */
+.content {
+  margin-top: 50px;
+  padding: 20px;
+}
