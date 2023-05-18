@@ -1,54 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Мой сайт</title>
-  <style>
-    /* Стили для меню */
-    ul.menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      background-color: #f1f1f1;
-      overflow: hidden;
-    }
-    
-    ul.menu li {
-      float: left;
-    }
-    
-    ul.menu li a {
-      display: block;
-      color: #333;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    ul.menu li a:hover {
-      background-color: #ddd;
-    }
-    
-    /* Стили для основного контента */
-    .content {
-      margin-top: 50px;
-      padding: 20px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Меню -->
-  <ul class="menu">
-    <li><a href="#">Главная</a></li>
-    <li><a href="#">О нас</a></li>
-    <li><a href="#">Организовать сплав</a></li>
-    <li><a href="#">Календарь сплавов</a></li>
-  </ul>
-  
-  <!-- Основной контент -->
-  <div class="content">
-    <h1>Добро пожаловать на наш сайт</h1>
-    <p>Здесь вы найдете информацию о сплавах и возможности организации своего сплава.</p>
+  <header>
+    <div class="container">
+      <h1>Название вашей компании</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Организовать сплав</a></li>
+          <li><a href="#">Календарь сплавов</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Дата события</div>
+        <div class="timeline-content">
+          <h3>Заголовок события</h3>
+          <p>Описание события</p>
+        </div>
+      </div>
+      
+      <!-- Добавьте другие элементы timeline-item по аналогии -->
+      
+    </section>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
