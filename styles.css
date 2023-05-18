@@ -80,7 +80,7 @@ body {
   width: 6px;
   background-color: #ff7c11;
   top: 0;
-  bottom: 0;
+  bottom: 350px;
   left: 50%;
   margin-left: -3px;
 }
@@ -182,3 +182,22 @@ body {
 .skill-percentage {
   margin-top: 5px;
 }
+
+.photo-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 49%;
+  margin-bottom: 20px;
+}
+
+.row img {
+  width: 48%;
+  height: auto;
+}
+
