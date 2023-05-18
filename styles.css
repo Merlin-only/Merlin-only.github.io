@@ -1,10 +1,16 @@
-/* Общие стили */
-body {
-  font-family: Arial, sans-serif;
+/* Reset CSS */
+* {
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #000;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
 }
 
 .container {
@@ -13,83 +19,166 @@ body {
   padding: 20px;
 }
 
-/* Заголовок и навигационное меню */
-header {
-  background-color: #ff7c11;
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  color: #fff;
+  background-color: #ff7c11;
+  color: #ffffff;
 }
 
-nav ul {
+.header-title {
+  font-size: 24px;
+}
+
+.header-menu {
+  display: flex;
+}
+
+.header-menu li {
+  margin-left: 20px;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
+/* Изменение цвета кнопок меню */
+.header-menu li a {
   text-decoration: none;
-  padding: 5px 10px;
+  color: white;
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Секция с Timeline */
+/* Добавление эффекта увеличения при наведении */
+.header-menu li a:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 20px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1673b5;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Timeline Styles */
 .timeline {
-  margin-top: 20px;
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #ff7c11;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
-.timeline-item .timeline-content {
+
+.timeline-content {
   position: relative;
+  width: 45%;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #1673b5;
+  background-color: #f0f0f0;
+  border-radius: 10px;
 }
 
-.timeline-item .timeline-date {
+.timeline-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.timeline-content span {
+  font-size: 12px;
+  color: #777777;
+}
+
+.timeline-content.left {
+  left: -55%;
+}
+
+.timeline-content.right {
+  left: 55%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: auto;
+  right: -55%;
+}
+
+.timeline-circle {
   position: absolute;
-  top: -25px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff7c11;
+  border-radius: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  background-color: #1673b5;
-  color: #fff;
-  padding: 5px 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+  .timeline-content {
+    width: 80%;
+  }
+
+  .timeline-content.left,
+  .timeline-content.right {
+    left: auto;
+    right: -55%;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    right: auto;
+    left: -55%;
+  }
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  width: 100%;
+  background-color: #f0f0f0;
   border-radius: 5px;
+  overflow: hidden;
 }
 
-.timeline-item .timeline-content h3 {
-  margin-top: 0;
+.skill-progress {
+  height: 8px;
+  background-color: #ff7c11;
 }
 
-/* Медиа-запросы для адаптивности */
-@media screen and (max-width: 768px) {
-  header {
-    padding: 10px;
-    font-size: 18px;
-  }
-
-  nav ul li a {
-    padding: 3px 6px;
-  }
-
-  .timeline-item .timeline-date {
-    font-size: 14px;
-    padding: 3px 6px;
-  }
-
-  .timeline-item .timeline-content {
-    padding: 10px;
-  }
-
-  .timeline-item .timeline-content h3 {
-    font-size: 18px;
-  }
+.skill-percentage {
+  margin-top: 5px;
 }
